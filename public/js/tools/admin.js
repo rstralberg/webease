@@ -1,9 +1,9 @@
 
-function show_admin_tools(user) {
-    if (user !== '' && is_adm()) {
+function show_admin_tools() {
+    if ( username() !== '' && is_adm()) {
         let tools = document.getElementById('admin-tools');
         if (is_valid(tools)) {
-            tools.style.display = user.adm === '1' ? 'flex' : 'none';
+            tools.style.display = is_adm() ? 'flex' : 'none';
         }
     }
 }

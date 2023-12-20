@@ -1,9 +1,9 @@
 
-function show_user_tools(user) {
-    if (user !== '') {
+function show_user_tools() {
+    if ( username() !== '') {
         let tools = document.getElementById('user-tools');
         if (is_valid(tools)) {
-            tools.style.display = user.username !== '' ? 'flex' : 'none';
+            tools.style.display = username() !== '' ? 'flex' : 'none';
         }
     }
     enable_add_tool(false);

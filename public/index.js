@@ -12,8 +12,6 @@ function index(pageid) {
                 let user = JSON.parse(resolve);
                 set_username(user.username);
                 set_adm(user.adm);
-                show_user_tools(user);
-                show_admin_tools(user);
 
                 let theme = get_cookie(key() + '/theme');
                 if( theme !== '') {
@@ -33,6 +31,8 @@ function index(pageid) {
 
 function start() {
     
+    show_user_tools();
+    show_admin_tools();
     get_navbar();
     get_title();
     get_content();

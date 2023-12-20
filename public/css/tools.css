@@ -1,5 +1,6 @@
 .admin-tools {
-    display: flex;
+    /* display: flex */
+    display: none;
     flex-direction: column;
     position: fixed;
     right: 1vw;
@@ -14,7 +15,8 @@
 }
 
 .user-tools {
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     position: fixed;
     left: 1vw;
