@@ -1,0 +1,89 @@
+
+input {
+    background-color: var(--inpBg);
+    color: var(--inpFg);
+
+    font-weight: var(--inpWeight);
+
+    outline-style: solid;
+    outline-color: var(--inpFg);
+    outline-width: calc( var(--inpBorder) * 1px);
+
+    border-radius: var(--borderRadius);
+
+    height: var(--inpH);
+
+    margin: 1vh 1vw 1vh 1vw;
+
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--inpShadow));
+}
+
+.left {
+    justify-content: left;
+    align-content:flex-start;
+}
+
+.center {
+    justify-content: center;
+    align-content:center;
+}
+
+.right {
+    justify-content: right;
+    align-content:flex-end;
+}
+
+label,
+select {
+    width: var(--inpW);
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+input:disabled {
+    background-color: var(--inpDisBg);
+    color: var(--inpDisFg);
+    cursor:not-allowed;
+}
+
+input[type=button] {
+
+    background-color: var(--btnBg);
+    color: var(--btnFg);
+
+    font-weight: var(--btnWeight);
+    
+    outline-style: solid;
+    outline-color: var(--btnFg);
+    outline-width: calc( var(--btnBorder) * 1px);
+
+    border-radius: var(--borderRadius);
+
+    width: var(--btnW);
+    height: var(--btnH);
+
+    margin-right: 1vw;
+
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--btnShadow));
+}
+
+input[type=button]:disabled {
+    background-color: var(--btnDisBg);
+    color: var(--btnDisFg);
+    cursor: not-allowed;
+}
+
+
+input[type=number] {
+    max-width: var(--inpW);
+}
+
+input[type=checkbox] {
+    width: var(--fontsize);
+    outline: none;
+    border:none
+}
+
+input[type=color] {
+    outline: none;
+    border:none;
+}

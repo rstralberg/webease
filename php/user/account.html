@@ -1,0 +1,33 @@
+<h1>${fullname}</h1>
+
+<hr>
+
+<input type="hidden" id="ea-username" value="${username}">
+
+<div class="cols-100">
+    <input type="hidden" id="ea-user-image">
+    <img id="ea-image" height="128px" width="auto" src="${picture}"></div>
+</div>
+
+<div class="cols-40-60">
+    <label for="ea-file">Bild</label>
+    <input accept=".jpeg, .png, .jpg" type="file" id="ea-file" onchange="ea_image_selected()">
+</div>
+
+<div class="cols-40-60">
+    <label for="ea-fullname">Fullständigt namn</label>
+    <input type="text" id="ea-fullname" value="${fullname}">
+</div>
+<div class="cols-40-60">
+    <label for="ea-email">Epost</label>
+    <input type="email" id="ea-email" value="${email}">
+</div>
+
+<hr>
+<input type="hidden" id="ea-user-password">
+<div>
+    <input id='ea-password' type="button" value="Lösenord" onclick="ea_password()">
+    <input id="eu-delete" type="button" value="Spara" onclick="ea_save()">
+    <input type="button" value="Klar" onclick="ea_close()">
+</div>
+

@@ -1,0 +1,15 @@
+<h1>Knappar</h1>
+
+<input type="color" value="${btnBg}" oninput="update_btnBg(this)">
+<input type="color" value="${btnFg}" oninput="update_btnFg(this)">
+<input type="color" value="${btnActBg}" oninput="update_btnActBg(this)">
+<input type="color" value="${btnActFg}" oninput="update_btnActFg(this)">
+<input type="color" value="${btnDisBg}" oninput="update_btnDisBg(this)">
+<input type="color" value="${btnDisFg}" oninput="update_btnDisFg(this)">
+<input type="number" min="0" max="100" value="${btnW}" oninput="update_btnW(this)">
+<input type="number" min="0" max="100" value="${btnH}" oninput="update_btnH(this)">
+<input type="checkbox" ${btnBorder} oninput="update_btnBorder(this)">
+<input type="color" value="${btnBorderColor}" oninput="update_btnBorderColor(this)">
+<input type="checkbox" ${btnShadow} oninput="update_btnShadow(this)">
+<hr>
+<input type="button" value="Klar" onclick="on_close_theme_btn()">

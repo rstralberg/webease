@@ -1,0 +1,50 @@
+<h1>Redigera användare</h1>
+
+<hr>
+
+<div class="cols-40-60">
+    <label for="edit_users_list">Användare</label>
+    <select id="edit_users_list" onchange="edit_users_selected()">
+        <option value="none">Välj!</option>
+        <option value="add">Lägg till ny användare!</option>
+        ${users}
+    </select>
+</div>
+
+<div>
+    <img id="edit_users_image" width="${size}px" height="auto" src="${img}"></img>
+</div>
+
+<div class="cols-40-60">
+    <label for="edit_users_file">Bild</label>
+    <input disabled accept=".jpeg, .png, .jpg" type="file" id="edit_users_file" onchange="edit_users_imgsrc_selected()">
+</div>
+
+<div class="cols-40-60">
+    <label for="edit_users_username">Användarnamn</label>
+    <input disabled type="text" id="edit_users_username">
+</div>
+<div class="cols-40-60">
+    <label for="edit_users_fullname">Fullständigt namn</label>
+    <input disabled type="text" id="edit_users_fullname">
+</div>
+<div class="cols-40-60">
+    <label for="edit_users_email">Epost</label>
+    <input disabled type="email" id="edit_users_email">
+</div>
+
+<hr>
+
+<input type="hidden" id="edit_users_hidden_password">
+<div>
+    <input id='edit_users_password' disabled type="button" value="Lösenord" onclick="on_edit_user_password()">
+</div>
+
+<div>
+    <input id='edit_users_save_new' disabled type="button" value="Spara ny" onclick="on_edit_user_save_new()">
+    <input id='edit_users_save' disabled type="button" value="Spara" onclick="on_edit_user_save()">
+</div>
+<div>
+    <input id="edit_users_delete" disabled type="button" value="Radera" onclick="on_edit_user_delete()">
+    <input type="button" value="Klar" onclick="on_close_editusers()">
+</div>

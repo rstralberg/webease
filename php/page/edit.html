@@ -1,0 +1,46 @@
+<h1>Redigera sidor</h1>
+
+<hr>
+
+<div>
+    <label for="edit-pages-pages">Välj sida:</label>
+    <select id="edit-pages-pages" onchange="on_edit_page_selected(this)">
+        <option value="none">Välj!</option>
+        ${pages}
+    </select>
+</div>
+
+<div >
+    <div style="width:min-content">
+        <img id="edit-pages-up" class="tool" src="icons/white/up.svg" onclick="on_page_move_up()">
+        <img id="edit-pages-down" class="tool" src="icons/white/down.svg" onclick="on_page_move_down()">
+    </div>
+    <ul id="edit-pages-pagelist">
+    </ul>
+</div>
+
+<input type="hidden" id="edit-pages-selected">
+<div>
+    <input disabled id="edit-pages-delete" type="button" value="Radera" onclick="on_delete_selected_page()">
+    <input type="text" disabled readonly id="edit-pages-selected-name">
+</div>
+
+<div >
+    <input disabled id="edit-pages-rename-button" type="button" value="Ändra" onclick="on_edit_change_pagename()">
+    <input disabled type="text" id="edit-pages-rename" oninput="on_edit_new_pagename(this)">
+</div>
+
+<div>
+    <label for="edit-pages-parent-select">Lägg sidan under</label>
+    <select id="edit-pages-parent-select" onchange="on_edit_parent_selected(this)">
+        <option value="none">Välj!</option>
+        <option value="0">Toppnivå!</option>
+        ${parents}
+    </select>
+</div>
+
+<hr>
+
+<div>
+    <input type="button" value="Klar" onclick="on_close_editpages()">
+</div>

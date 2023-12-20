@@ -1,0 +1,18 @@
+<h1>Spotify</h1>
+
+<hr>
+
+<div id="sp-frame">
+</div>
+
+<div class="left">
+    <label style="width:min-content" for="sp-url">Klistra in här:</label>
+    <input style="width:-webkit-fill-available" type="text" id="sp-url" onchange="on_spotify_pasted(this)">
+</div>
+
+<hr>
+
+<div>
+    <input id="sp-save-button" type="button" value="Spara" onclick="add_new_spotify()">
+    <input type="button" value="Stäng" onclick="on_close_spotify()">
+</div>

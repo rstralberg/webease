@@ -1,0 +1,48 @@
+{
+    "configurations": [
+        {
+            "name": "Launch GrafitGubben",
+            "type": "php",
+            "request": "launch",
+            "runtimeArgs": [
+                "-dxdebug.remote_enable=1",
+                "-dxdebug.remote_autostart=1",
+                "-dxdebug.mode=debug",
+                "-dxdebug.start_with_request=yes",
+                "-S",
+                "localhost:8080"
+            ],
+            "program": "",
+            "cwd": "${workspaceRoot}/public",
+            "port": 9003,
+            "serverReadyAction": {
+                "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
+                "uriFormat": "http://localhost:%s/gg",
+                "action": "openExternally"
+            },
+            "runtimeExecutable": "/usr/bin/php"
+        },
+        {
+            "name": "Launch KalixMixen",
+            "type": "php",
+            "request": "launch",
+            "runtimeArgs": [
+                "-dxdebug.remote_enable=1",
+                "-dxdebug.remote_autostart=1",
+                "-dxdebug.mode=debug",
+                "-dxdebug.start_with_request=yes",
+                "-S",
+                "localhost:8080"
+            ],
+            "program": "",
+            "cwd": "${workspaceRoot}/public",
+            "port": 9003,
+            "serverReadyAction": {
+                "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
+                "uriFormat": "http://localhost:%s/km",
+                "action": "openExternally"
+            },
+            "runtimeExecutable": "/usr/bin/php"
+        }
+    ]
+}

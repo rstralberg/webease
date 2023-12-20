@@ -1,0 +1,23 @@
+<h1>Redigerar ${theme}</h1>
+
+<input type="hidden" value="${theme}" id="theme-name">
+
+<div>
+    <select onchange="theme_type_selected(this)">
+        <option value="none">Välj</option>
+        <option value="bar">Fält</option>
+        <option value="nav">Meny</option>
+        <option value="title">Titlar</option>
+        <option value="article">Avsnitt</option>
+        <option value="section">Block</option>
+        <option value="form">Formulär</option>
+        <option value="btn">Knappar</option>
+        <option value="inp">Skrivfält</option>
+        <option value="gen">Övrigt</option>
+    </select>
+</div>
+
+<hr>
+<div>
+    <input type="button" value="Klar" onclick="close_theme_editor()">
+</div>

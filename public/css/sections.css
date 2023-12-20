@@ -1,0 +1,122 @@
+
+section {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    background-color: var(--sectionBg);
+    color: var(--sectionFg);
+
+    margin-top: 2vh;
+    width: var(--sectionW);
+    border-radius: var(--borderRadius);
+    outline-style: solid;
+    outline-color: var(--sectionFg);
+    outline-width: calc( var(--sectionBorder) * 1px);
+
+
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--sectionShadow));
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: var(--sectionMargin);
+}
+
+section:hover {
+    background-color: var(--sectionActBg);
+}
+
+.active-section {
+    border: 3px dashed yellow;
+}
+
+.shadow {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
+}
+
+section img   {
+    height: auto;
+    width: 95% !important;
+}
+
+section a {
+    color: var(--weblinkFg);
+    font-weight: bold;
+}
+
+section iframe {
+    width: -webkit-fill-available;
+    height: revert-layer;
+}
+
+section figure {
+    border: none;
+    background-color: var(--sectionBg);
+}
+
+section ul {
+    border: none;
+    outline: none;
+}
+
+section li {
+    margin-bottom: var(--fontsize);
+}
+
+
+.empty {
+    display: flex;    
+}
+
+.text {
+    display: flex;    
+    font-size: var(--fontsize);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+    color: var(--sectionTitleFg);
+    border-radius: var(--borderRadius);
+    outline-width: var(--sectionTitleBorder);
+    outline-style: solid;
+    outline-color: var(--sectionTitleBorderColor);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--sectionTitleShadow));
+    font-weight: bold;
+    font-size: calc( 1.5 * var(--fontsize));
+    line-height: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.image {
+    display: flex;    
+}
+
+.audio {
+    display: block;    
+}
+
+.soundcloud {
+    display: block;    
+}
+
+.spotify {
+    display: block;    
+}
+
+.youtube {
+    display: block;    
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    section {
+        width: 90%;
+    }
+}

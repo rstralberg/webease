@@ -1,0 +1,30 @@
+<h1>Bild</h1>
+
+<hr>
+
+<div>
+    <img  id="ai-image" src="${url}" width="${size}px" height="auto">
+</div>
+
+<div>
+    <label for="ai-file">Klicka för att välja bild:</label>
+    <input accept="image/jpeg, image/png, image/jpg" type="file" id="ai-file" name="file" value="${url}"
+        onchange="on_image_file(this)">
+</div>
+
+<div>
+    <label for="ai-caption">Kommentar:</label>
+    <input type="text" id="ai-caption" placeholder="Skriv en kort kommentar till bilden" value="${caption}">
+</div>
+
+<div>
+    <label for="ai-shadow">Skugga:</label>
+    <input type="checkbox" id="ai-shadow" ${shadow}>
+</div>
+
+<hr>
+
+<div>
+    <input type="button" id="ai-save" value="Spara" onclick="add_new_image()">
+    <input type="button" value="Stäng" onclick="on_close_image()">
+</div>

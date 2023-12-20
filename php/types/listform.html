@@ -1,0 +1,31 @@
+<h1>Lista</h1>
+
+<ul id="list" style="list-style: disc">
+
+</ul>
+
+<div class="cols-1">
+    Lägg till åtminstonde en rad. Du kan lägga till fler senare om du vill
+</div>
+<div class="cols-2">
+    <input type="button" value="Lägg till" onclick="add_to_list()">
+    <input type="button" value="Ta bort" onclick="remove_from_list()">
+</div>
+<div class="cols-1">
+    <input type="text" id="list-item" value="">
+</div>
+
+<div class="cols-2">
+    <label for="list-type">Typ</label>
+    <select id="list-type" onchange="update_list_type(this)">
+        <option value="disc">Punkter</option>
+        <option value="decimal">Siffror</option>
+        <option value="square">Fyrkant</option>
+        <option value="decimal">Siffror</option>
+        <option value="upper-alpha">Bokstäver</option>
+        <option value="upper-roman">Romersk</option>
+    </select>
+</div>
+
+<input type="button" value="Spara" onclick="save_list()">
+<input type="button" value="Stäng" onclick="close_list()">

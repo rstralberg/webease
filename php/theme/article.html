@@ -1,0 +1,10 @@
+<h1>Artiklar</h1>
+
+<input id="article-w" type="number" min="0" max="100" value="${articleW}" oninput="update_articleW(this)">
+<input type="number" min="0" max="10" value="${articleMargin}" oninput="update_articleMargin(this)">
+<input id="article-bg" type="color" value="${articleBg}" oninput="update_articleBg(this)">
+<input id="articleborder" type="checkbox" ${articleBorder} oninput="update_articleBorder(this)">
+<input id="articlebordercolor" type="color" value="${articleBorderColor}" oninput="update_articleBorderColor(this)">
+<input type="checkbox" ${articleShadow} oninput="update_articleShadow(this)">
+<hr>
+<input type="button" value="Klar" onclick="close_theme_article()">

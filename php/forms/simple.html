@@ -1,0 +1,18 @@
+<h1>${title}</h1>
+
+<hr>
+
+<div class="cols-40-60">
+    <label for="${id}">${label}:</label>
+    <input type="text" id="${id}" value="${value}">
+</div>
+
+<hr>
+
+<div class="cols-100">
+    <input type="button" value="OK" onclick="${callback}(${id})">
+</div>
+
+<div class="cols-100">
+    <input type="button" value="Stäng" onclick="close_simple('${formId}')">
+</div>

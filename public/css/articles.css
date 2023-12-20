@@ -1,0 +1,25 @@
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: var(--articleW);
+    background-color: var(--articleBg);
+    border-radius: var(--borderRadius);
+    outline-style: solid;
+    outline-color: var(--sectionFg);
+    outline-width: calc( var(--articleBorder) * 1px);
+ 
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--articleShadow));
+    padding-bottom: calc( 2* var(--articleMargin));
+    margin-bottom: var(--articleMargin);
+}
+
+article:hover {
+    background-color: var(--sectionBg);
+}
+
+.active-article {
+    outline: 3px dashed  lawngreen;
+}

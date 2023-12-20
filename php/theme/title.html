@@ -1,0 +1,13 @@
+<h1>Titel</h1>
+
+<input id="theme-title" type="number" min="0" max="100" value="${titleW}" oninput="update_tltleW(this)">
+<input type="number" min="1" max="10" value="${titleH}" oninput="update_tltleH(this)">
+<input type="number" min="0" max="10" value="${titleMargin}" oninput="update_tltleMargin(this)">
+<input id="title-fg" type="color" value="${titleFg}" oninput="update_tltleFg(this)">
+<input id="titleStyle" type="checkbox" ${titleStyle} oninput="update_tltleStyle(this)">
+<input id="titleWeight" type="checkbox" ${titleWeight} oninput="update_tltleWeight(this)">
+<input id="titleborder" type="checkbox" ${titleBorder} oninput="update_tltleBorder(this)">
+<input type="color" value="${titleBorderColor}" oninput="update_tltleBorderColor(this)">
+<input type="checkbox" ${titleShadow} oninput="update_tltleShadow(this)">
+<hr>
+<input type="button" value="Klar" onclick="close_theme_title()">

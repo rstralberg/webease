@@ -1,0 +1,19 @@
+<h1>Webblänk</h1>
+
+<hr>
+
+<div class="cols-30-70">
+    <label for="wl-text">Text</label>
+    <input type="text" placeholder="Texten som visas" id="wl-text" value="${text}">
+</div>
+
+<div class="cols-30-70">
+    <label for="wl-link">Webblänk</label>
+    <input type="text" id="wl-link" placeholder="Skriv webbadressen, tex https://kalixmixen.se" value="https://">
+</div>
+<hr>
+
+<div>
+    <input id="wl-save-button" type="button" value="Spara" onclick="on_save_weblink()">
+    <input type="button" value="Stäng" onclick="on_close_weblink()">
+</div>

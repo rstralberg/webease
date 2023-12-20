@@ -1,0 +1,18 @@
+<h1>Redigering av teman</h1>
+
+<div class="cols-2">
+    <label for="theme-select">Välj Tema</label>
+    <select id="theme-select" onchange="theme_selected(this)">
+        <option value="none">Välj</option>
+        ${themes}
+    </select>
+</div>
+<hr>
+<div class="cols-2">
+    <input disabled id="theme-edit-button" type="button" value="Redigera" onclick="edit_theme('theme-select')">
+    <input disabled id="theme-delete-button" type="button" value="Radera" onclick="delete_theme('theme-select')">
+</div>
+<div class="cols-2">
+    <input type="button" value="Nytt" onclick="add_new_theme()">
+    <input type="button" value="Klar" onclick="close_edit_theme()">
+</div>

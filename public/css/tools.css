@@ -1,0 +1,37 @@
+.admin-tools {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1vw;
+    top: 10vh
+}
+
+.admin-tool {
+    display: block;
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+}
+
+.user-tools {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 1vw;
+    top: 10vh
+}
+
+.user-tool {
+    display: block;
+    width: 24px;
+    height: auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+    .admin-tools,
+    .user-tools {
+        display: none !important;
+    }
+}

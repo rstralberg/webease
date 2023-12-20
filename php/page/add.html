@@ -1,0 +1,25 @@
+<h1>Lägg till ny sida</h1>
+
+<hr>
+
+<div>
+    <label for="addpage-title">Titel</label>
+    <input type="text" id="addpage-title">
+</div>
+
+<div class="left">
+    <label for="addpage-type">Typ</label>
+    <select id="addpage-type"> 
+        <option value="top">I topp meny</option>
+        <option value="parent">Rubrik för andra sidor</option>
+        ${pages}
+    </select>
+</div>
+
+<hr>
+<div>
+    <input id='addpage-save' type="button" value="Skapa" onclick="on_save_new_page()">
+    <input type="button" value="Åter" onclick="on_close_new_page()">
+</div>
+
+

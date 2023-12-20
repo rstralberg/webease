@@ -1,0 +1,29 @@
+<h1>Kommentar</h1>
+
+<hr>
+
+<div class="cols-60-40">
+    <img id="comm-image" width="128" height="auto" src="${picture}">
+    <input disabled readonly type="text" id="comm-username" value="${username}">
+</div>
+
+<hr>
+
+<div class="cols-20-80">
+    <label for="comm-title">Titel</label>
+    <input type="text" id="comm-title" placeholder="Ange en titel för inlägget" onchange="on_comment_title(this)">
+</div>
+
+<div id="comm-comment" contenteditable>
+Skriv här ...
+</div>
+
+<hr>
+
+<div class="cols-100">
+    <input disabled id='comm-save' type="button" value="Spara" onclick="on_save_comment()">
+</div>
+
+<div class="cols-100">
+    <input type="button" value="Klar" onclick="on_close_comment()">
+</div>

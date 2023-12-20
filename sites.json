@@ -1,0 +1,19 @@
+{
+    "sites": [
+      {
+        "key": "km",
+        "title": "KalixMixen",
+        "owner": "Roland Strålberg",
+        "email": "rstralberg@pm.me",
+        "theme": "WebEase"
+      },
+      {
+        "key": "gg",
+        "title": "GrafitGubben",
+        "owner": "Roland Strålberg",
+        "email": "rstralberg@pm.me",
+        "theme": "WebEase"
+      }
+    ]
+  }
+  

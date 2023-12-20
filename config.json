@@ -1,0 +1,9 @@
+{
+    "dbHost" : "localhost",
+    "dbUser" : "root",
+    "dbDatabase" : "WebEase",
+    "dbPassword" : "p5sk06a",
+    "dbTheme" : "WebEase",
+    "iconPrefix" : "WebEase",
+    "dbMaxImageSize" : 2048
+}

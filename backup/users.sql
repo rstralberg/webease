@@ -1,0 +1,1 @@
+INSERT INTO `users` (`username`,`fullname`,`email`,`picture`,`password`,`adm`) VALUES ('admin','Roland Strålberg','rstralberg@pm.me','avatar.png','$2y$10$HuFnMKgHT2iAM897x.dZCuJDPcWDsC7UnzGEaQd3yNwTfbiJRJPCm',1);

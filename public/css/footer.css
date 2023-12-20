@@ -1,0 +1,34 @@
+
+.footer-img {
+        height: auto;
+        width: calc( 0.7 * var(--footerH));
+        margin: var(--fontsize);
+        border: 1px solid var(--footerFg);
+        border-radius: 32px;
+}
+
+.footer-webease {
+    font-weight: bold;
+    margin-right: 1em;
+    font-size: large;
+}
+
+
+.footer-by {
+    font-weight: normal;
+}
+
+.footer-sitename {
+    font-weight: bold;
+    position: fixed;
+    right: 2vw;
+    font-size: large;
+    color: var(--navActFg);
+    letter-spacing: calc( var(--fontsize ) /2 );
+}
+
+@media screen and (max-width: 600px) {
+    .footer-by {
+        display: none;
+    }
+}

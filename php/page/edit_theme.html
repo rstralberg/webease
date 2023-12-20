@@ -1,0 +1,62 @@
+<h1>Tema</h1>
+
+<figure>
+    <figcaption>Titel</figcaption>
+
+    <div class="left">
+        <label style="max-width:100px" for="theme-title">Bredd Höjd Marginal Färg</label>
+        <input id="theme-title" type="number" min="0" max="100" value="${titleW}" oninput="update_tltleW(this)">
+        <input type="number" min="1" max="10" value="${titleH}" oninput="update_tltleH(this)">
+        <input type="number" min="0" max="10" value="${titleMargin}" oninput="update_tltleMargin(this)">
+        <input id="title-fg" type="color" value="${titleFg}" oninput="update_tltleFg(this)">
+    </div>
+
+    <div class="left">
+        <label for="titleStyle">Kursiv Fet Ram Skugga</label>
+        <input id="titleStyle" type="checkbox" ${titleStyle} oninput="update_tltleStyle(this)">
+        <input id="titleWeight" type="checkbox" ${titleWeight} oninput="update_tltleWeight(this)">
+        <input id="titleborder" type="checkbox" ${titleBorder} oninput="update_tltleBorder(this)">
+        <input type="checkbox" ${titleShadow} oninput="update_tltleShadow(this)">
+    </div>
+</figure>
+
+<figure>
+    <figcaption>Avsnitt</figcaption>
+
+    <div class="left">
+        <label for="article-w">Bredd Marginal Färg</label>
+        <input id="article-w" type="number" min="0" max="100" value="${articleW}" oninput="update_articleW(this)">
+        <input type="number" min="0" max="10" value="${articleMargin}" oninput="update_articleMargin(this)">
+        <input id="article-bg" type="color" value="${articleBg}" oninput="update_articleBg(this)">
+    </div>
+
+    <div class="left">
+        <label for="articleborder">Ram Skugga</label>
+        <input id="articleborder" type="checkbox" ${articleBorder} oninput="update_articleBorder(this)">
+        <input type="checkbox" ${articleShadow} oninput="update_articleShadow(this)">
+    </div>
+</figure>
+
+<figure>
+    <figcaption>Block</figcaption>
+
+    <div class="left">
+        <label for="section-w">Bredd Marginal Färger</label>
+        <input id="section-w" type="number" min="0" max="100" value="${sectionW}" oninput="update_sectionW(this)">
+        <input type="number" min="0" max="10" value="${sectionMargin}" oninput="update_sectionMargin(this)">
+        <input id="section-bg" type="color" value="${sectionBg}" oninput="update_sectionBg(this)">
+        <input type="color" value="${sectionFg}" oninput="update_sectionFg(this)">
+        <input type="color" value="${sectionActBg}" oninput="update_sectionActBg(this)">
+    </div>
+
+    <div class="left">
+        <label for="section-border">Ram Skugga</label>
+        <input id="section-border" type="checkbox" ${sectionBorder} oninput="update_sectionBorder(this)">
+        <input type="checkbox" ${sectionShadow} oninput="update_sectionShadow(this)">
+    </div>
+</figure>
+
+<hr>
+<div>
+    <input type="button" value="Klar" onclick="on_close_page_theme()">
+</div>

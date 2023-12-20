@@ -1,0 +1,33 @@
+
+.header-without-tool {
+    display: flex;
+    justify-content: center;
+
+}
+
+.header-with-tool {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+
+.title-tool {
+    height: 24px;
+    width: auto;
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+
+    .title-tool {
+        display: none;
+    }
+
+    .header-with-tool {
+        font-size: calc( 0.6 * var(--fontsize) );
+    }
+    
+}

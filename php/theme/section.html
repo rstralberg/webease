@@ -1,0 +1,13 @@
+<h1>Block</h1>
+<label for="section-w">Bredd Marginal Färger</label>
+<input id="section-w" type="number" min="0" max="100" value="${sectionW}" oninput="update_sectionW(this)">
+<input type="number" min="0" max="10" value="${sectionMargin}" oninput="update_sectionMargin(this)">
+<input id="section-bg" type="color" value="${sectionBg}" oninput="update_sectionBg(this)">
+<input type="color" value="${sectionFg}" oninput="update_sectionFg(this)">
+<input type="color" value="${sectionActBg}" oninput="update_sectionActBg(this)">
+<label for="section-border">Ram Skugga</label>
+<input id="section-border" type="checkbox" ${sectionBorder} oninput="update_sectionBorder(this)">
+<input type="color" value="${sectionBorderColor}" oninput="update_sectionBorderColor(this)">
+<input type="checkbox" ${sectionShadow} oninput="update_sectionShadow(this)">
+<hr>
+<input type="button" value="Klar" onclick="close_theme_section()">

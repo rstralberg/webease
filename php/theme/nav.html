@@ -1,0 +1,27 @@
+<figcaption>Fält</figcaption>
+
+<div>
+    <label for="navW">Bredd Höjd</label>
+    <input id="navW" type="number" min="0" max="100" value="${navW}" oninput="update_navW(this)">
+    <input id="navH" type="number" min="0" max="100" value="${navH}" oninput="update_navH(this)">
+</div>
+
+<div>
+    <label for="navMargin">Marginal</label>
+    <input id="navMargin" type="number" min="0" max="100" value="${navMargin}" oninput="update_navMargin(this)">
+</div>
+
+<div>
+    <label for="navFg">Färger</label>
+    <input id="navFg" type="color" value="${navFg}" oninput="update_navFg(this)">
+    <input id="navActBg" type="color" value="${navActBg}" oninput="update_navActBg(this)">
+    <input id="navActFg" type="color" value="${navActFg}" oninput="update_navActFg(this)">
+</div>
+
+<div>
+    <label for="navWeight">Fet stil</label>
+    <input id="navWeight" type="checkbox" ${navWeight} oninput="update_navWeight(this)">
+</div>
+
+<hr>
+<input type="button" value="Klar" onclick="close_theme_nav()">

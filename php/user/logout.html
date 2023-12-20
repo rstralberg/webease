@@ -1,0 +1,28 @@
+
+<h1>${username}</h1>
+
+<input type="hidden" id="logout-username" value="${username}">
+<hr>
+
+<div>
+    Vad du vill göra?
+</div>
+
+<div>
+    <input type="button" style="width:200px" value="Logga ut" onclick="on_logout()">
+</div>
+
+<div>
+    <input type="button" style="width:200px" value="Redigera ditt konto" onclick="on_edit_account()">
+</div>
+
+<div>
+    <input ${disabled} style="width:200px" type="button" value="Radera ditt konto" onclick="on_delete_account()">
+</div>
+
+<hr>
+
+<div>
+    <input type="button" value="Stäng" onclick="on_logout_close()">
+</div>
+
