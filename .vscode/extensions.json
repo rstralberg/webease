@@ -9,6 +9,8 @@
         "quick-lint.quick-lint-js",
         "ms-vscode-remote.remote-ssh",
         "bmewburn.vscode-intelephense-client",
-        "kokororin.vscode-phpfmt"
+        "kokororin.vscode-phpfmt",
+        "ms-vscode.hexeditor",
+        "adpyke.vscode-sql-formatter"
     ]
 }
