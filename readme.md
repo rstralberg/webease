@@ -7,8 +7,10 @@ This is a personal project of mine made just for my own pleasure.
 # MariaDb
 sudo mysql -u root
 
+create user 'webease'@localhost identified by 'winterfall';
+
 create database km;
-create user 'km'@localhost identified by 'winterfall';
+grant all privileges on gg.* to 'webease'@localhost;
 
 create database gg;
 grant all privileges on gg.* to 'webease'@localhost;

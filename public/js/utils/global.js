@@ -26,12 +26,7 @@ function is_adm() {
 }
 
 function set_adm(adm) {
-    if (typeof adm === 'boolean')
-        document.getElementById('_adm').value = adm ? '1' : '0';
-    else if (typeof adm === 'string')
-        document.getElementById('_adm').value = adm === 'true' ? '1' : '0';
-    else
-        document.getElementById('_adm').value = adm === 1 ? '1' : '0';
+    document.getElementById('_adm').value = parseInt(adm) === 1 ? '1' : '0';
 }
 
 function key() {

@@ -23,7 +23,6 @@ function load_config() : Conf {
         $conf = new Conf;
         $conf->dbHost = $params->dbHost;
         $conf->dbUser = $params->dbUser;
-        $conf->dbDatabase = $params->dbDatabase;
         $conf->dbPassword = $params->dbPassword;
         $conf->dbTheme = $params->dbTheme;
         $conf->iconPrefix = $params->iconPrefix;
