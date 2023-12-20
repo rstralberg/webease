@@ -19,8 +19,9 @@ if (verify_args($args, [ 'pageId', 'pos' ])) {
     }
 
     $id = db_insert($db, 'sections', 
-        ['articleId','type','pos', 'align', 'content'],
-        [$id, 'title', 0, 'center', 'Rubrik']);
+        ['articleId','type', 'pos', 'align', 'content'],
+        [$id, 'title', 0, 'center', json_encode( [
+            'title' =>  'Rubrik'])]);
     if( gettype($id) === 'integer' && $id === 0  ) {
         db_close($db);
         send_reject('Could not add section to article "'.$id.'"');

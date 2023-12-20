@@ -4,5 +4,6 @@ function align_center() {
     if( element  ) 
     {
         element.style.justifyContent = 'center';
+        
     }
 }

@@ -27,35 +27,71 @@ if (verify_args($args, ['pageid', 'username'])) {
     $html = '';
     $html .= '<img class="nav-logo" src="' . $logo . '" width="auto" height="32px">';
 
+
+    $menu = array();
+
+
     $pages = db_select($db, 'pages', ['id', 'isParent', 'parentId', 'isPublic', 'title'],
-        null, db_order_by('pos', 'asc'));
+        db_where($db, 'isParent', '1') . ' or ' .
+        db_where($db, 'parentId', 0) 
+        , db_order_by('pos', 'asc'));
     if (db_result($pages, 'Failed to fetch any pages') === false) {
         exit(0);
     }
-
-    // Pages
     for ($i = 0; $i < count($pages); $i++) {
         $page = $pages[$i];
+        if( $page['isPublic'] || $args->username != '' ) {
+            $top = [
+                'id' => $page['id'],
+                'title' => $page['title'],
+                'isPublic' => $page['isPublic'],
+                'childs' => null
+            ];
+            
+            if( $page['isParent'] === '1') {
+                $subs = db_select($db, 'pages', ['id', 'isParent', 'parentId', 'isPublic', 'title'],
+                db_where($db, 'parentId', $page['id']), 
+                db_order_by('pos', 'asc'));
+                if( gettype($subs) === 'array') {
+                    $sublevel = array();
+                    for( $j=0; $j < count($subs); $j++) {
+                        $sub = $subs[$j];
+                        if( $args->username != '' || $sub['isPublic'] ) {
+                            array_push($sublevel,  [
+                                'id' => $sub['id'],
+                                'title' => $sub['title'],
+                                'isPublic' => $sub['isPublic'],
+                                'childs' => null
+                            ]);
+                        }
+                    }
+                    $top['childs'] = $sublevel;
+                }
+            }
+            array_push($menu, $top );
+        }
+    }
 
-        if ($page['isParent'] === '1') {
+    // Pages
+    for ($i = 0; $i < count($menu); $i++) {
+        $page = $menu[$i];
+
+        if ( $page['childs'] !== null && count($page['childs']) > 0 ) {
 
             // begin: subnav-content
             $html .= '<div class="dropdown">';
             $html .= '<button class="dropbtn">' . $page['title'] . '&nbsp;&nabla;</button>';
             
-            // begin: subnav-content
             $html .= '<div class="dropdown-content">';
-            $pagechilds = db_select($db, 'pages', ['id', 'isParent', 'parentId', 'isPublic', 'title'],
-                db_where($db, 'parentId', $page['id']), db_order_by('pos', 'asc'));
-            if (gettype($pagechilds) === 'array') {
-                foreach ($pagechilds as $child) {
-                    if ($args->username !== '' || $child['isPublic'] === '1') {
-                        $html .= '<a ';
-                        if( $child['id'] === $args->pageid) {
-                            $html .= 'class="active" ';
-                        }
-                        $html .= 'href="' . $args->key . '?p=' . $child['id'] . '">' . $child['title'] . '</a>';
+
+            for( $j=0; $j < count($page['childs']); $j++ ) {
+                $child = $page['childs'][$j];
+                if ($args->username !== '' || $child['isPublic'] === '1') {
+                    $html .= '<a ';
+                    if( $child['id'] === $args->pageid) {
+                        $html .= 'class="active" ';
                     }
+                    $html .= 'href="' . $args->key . '?p=' . $child['id'] . '">' . $child['title'] . '</a>';
                 }
             }
             $html .= '</div>';
@@ -63,16 +99,14 @@ if (verify_args($args, ['pageid', 'username'])) {
 
             $html .= '</div>';
             // end: subnav
-        } else {
-            if ($args->username !== '' || $page['isPublic'] === '1') {
-                if ($page['parentId'] === '0') {
-                    $html .= '<a ';
-                    if( $page['id'] === $args->pageid) {
-                        $html .= 'class="active" ';
-                    }
-                    $html .= 'href="' . $args->key . '?p=' . $page['id'] . '">' . $page['title'] . '</a>';
-                }
+        } 
+        else {
+        
+            $html .= '<a ';
+            if( $page['id'] === $args->pageid) {
+                $html .= 'class="active" ';
             }
+            $html .= 'href="' . $args->key . '?p=' . $page['id'] . '">' . $page['title'] . '</a>';
         }
     }
 
@@ -95,8 +129,7 @@ if (verify_args($args, ['pageid', 'username'])) {
     $html .= '</div>';
     // end: subnav
 
-    // $html .= '<div id="debug" style="color:red">' . $args->pageid . '</div>';
-    // $html .= '<a href="javascript:void(0);" class="icon" onclick="on_toggle_navbar()">&#9776;</a>';
+    $html .= '<a href="javascript:void(0);" class="icon" onclick="on_toggle_navbar()">&#9776;</a>';
     db_close($db);
 
     send_resolve(compress_html($html));

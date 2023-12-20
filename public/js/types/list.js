@@ -66,4 +66,3 @@ function remove_from_list() {
     }
 }
     
-

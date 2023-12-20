@@ -14,13 +14,14 @@ function entering_article(element) {
     enable_article_tools(true);
     enable_move_tools(true);
     enable_delete_tool(true);
+    enable_save_tool(true);
 }
 
 function leaving_article() {
 
-    let element = selected_article();
-    if (element) {
-        remove_class(element, 'active-article');
+    let article = selected_article();
+    if (article) {
+        remove_class(article, 'active-article');
     }
 
 
@@ -28,15 +29,29 @@ function leaving_article() {
     enable_article_tools(false);
     enable_move_tools(false);
     enable_delete_tool(false);
+    enable_save_tool(false);
 
-    if (element) {
-        server('article/update', {
-            id: parseInt(element.id.substring(1)),
-            pos: get_child_pos(element)
-        });
-    }
+    save_article();
     unselect_article();
 }
 
 
 
+function save_article() {
+
+    let article = selected_article();
+    if (article) {
+        server('article/update', {
+            id: article.id,
+            pos: get_child_pos(article)
+        });
+        for( let i=0; i < article.childElementCount; i++) {
+            let section = article.children[i];
+            let func = 'update_' + section.getAttribute('type');
+            console.log( func );
+            window[func](section);
+        }
+    }
+
+
+}

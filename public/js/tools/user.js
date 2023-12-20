@@ -14,6 +14,8 @@ function show_user_tools() {
     enable_section_tools(false);
     enable_text_tools(false);
     enable_shadow_tool(false);
+    enable_save_tool(false);
+
 }
 
 function enable_text_tools(enable) {
@@ -62,3 +64,8 @@ function enable_delete_tool(enable) {
 function enable_add_tool(enable) {
     enable_tool('t-add', enable, 'add');
 }
+
+function enable_save_tool(enable) {
+    enable_tool('t-save', enable, 'save');
+}
+

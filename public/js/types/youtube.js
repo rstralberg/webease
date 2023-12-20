@@ -38,7 +38,7 @@ function on_save_youtube() {
             track: filename_only(document.getElementById('yt-url').value)
         })
     }).then(
-        () => {
+        (id) => {
             get_content();
         }
     );

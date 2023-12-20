@@ -1,1 +1,1 @@
-INSERT INTO `users` (`username`,`fullname`,`email`,`picture`,`password`,`adm`) VALUES ('admin','Roland Strålberg','rstralberg@pm.me','avatar.png','$2y$10$HuFnMKgHT2iAM897x.dZCuJDPcWDsC7UnzGEaQd3yNwTfbiJRJPCm',1);
+INSERT INTO `users` (`username`,`fullname`,`email`,`picture`,`password`,`adm`) VALUES ('admin','Roland Strålberg','rstralberg@pm.me','avatar.png','$2y$10$7pHSANh24aYNkVDD.Z/A1.32m2tsclG.SEVmxEP7ah.aRBDtkHaLW',1);

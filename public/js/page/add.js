@@ -26,7 +26,7 @@ function on_save_new_page() {
         parentId = 0 ;
     } 
     else {
-        isParent = true;
+        isParent = false;
         parentId = parseInt(type) ;
     }
 

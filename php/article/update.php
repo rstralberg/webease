@@ -8,10 +8,11 @@ if (verify_args($args, ['id','pos'])) {
 
     $db = db_open($args->key);
     
+    $id = (int)substr($args->id,1);
     $res = db_update($db, 'articles', 
         ['pos'],
         [$args->pos],
-        db_where($db, 'id', $args->id));
+        db_where($db, 'id', $id));
     db_close($db);
     if( $res === false ) {
         send_reject('Could not update article "' . $args->id . '"');

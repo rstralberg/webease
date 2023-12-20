@@ -79,6 +79,15 @@ function scripts() : string {
     $html.= script('tools/user');
     $html.= script('tools/admin');
     
+    $html.= script('update/audio');
+    $html.= script('update/image');
+    $html.= script('update/list');
+    $html.= script('update/soundcloud');
+    $html.= script('update/spotify');
+    $html.= script('update/text');
+    $html.= script('update/title');
+    $html.= script('update/youtube');
+    
     $html.= script('utils/conv');
     $html.= script('utils/cookies');
     $html.= script('utils/editor');

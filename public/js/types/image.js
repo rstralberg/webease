@@ -69,3 +69,4 @@ function add_new_image() {
     );
     on_close_image();
 }
+

@@ -28,7 +28,6 @@ function entering_section(element) {
             figcaption.contentEditable = true;
         }
     }
-
 }
 
 function leaving_section() {
@@ -44,6 +43,7 @@ function leaving_section() {
                 img.removeEventListener('mousewheel', (e) => { });
             }
         }
+
     }
 
     enable_add_tool(false);
@@ -74,3 +74,17 @@ function leaving_section() {
     unselect_section();
 }
 
+function add_section(id, type, align) {
+
+    let article = selected_article();
+    if( article === false );
+
+    let section = document.createElement('section');
+    section.setAttribute('type', type);
+    add_class(section, type);
+    section.style.justifyContent = align;
+    section.id = 's'+id;
+
+    article.appendChild(section);
+    return section;
+}

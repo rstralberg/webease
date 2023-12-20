@@ -57,13 +57,9 @@ function selected_article() {
 }
 
 function select_article(element) {
-    
     document.getElementById('_article').value = is_valid(element) ? element.id : '';
 }
 
 function unselect_article() {
-    
     document.getElementById('_article').value = '';
-    
 }
-

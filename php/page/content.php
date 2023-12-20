@@ -71,6 +71,7 @@ if (verify_args($args, ['pageid'])) {
             }
             $html.= '</section>';
         }
+        $html.='</article>';
     }
     db_close($db);
 
