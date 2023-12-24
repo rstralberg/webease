@@ -1,0 +1,31 @@
+<h1>Bildgalleri</h1>
+
+<hr>
+
+<div style="display: flex; justify-content: center;">
+    <figure id="eg-gallery" class="gallery-container shadow" style="max-width: 50%;">
+        ${images}
+    </figure>
+</div>
+
+<div>
+    <label for="eg-file">Klicka för att lägga till en bild:</label>
+    <input accept="image/jpeg, image/png, image/jpg" type="file" id="eg-file" name="file"
+        onchange="edit_gallery_image_selected(this)">
+</div>
+
+<div>
+    <label for="eg-shadow">Skugga:</label>
+    <input type="checkbox" id="eg-shadow" checked onchange="edit_gallery_shadow_toggle(this)">
+</div>
+
+<div>
+    <input type="button" value="Ta bort" onclick="remove_edit_gallery_image()">
+</div>
+
+<hr>
+
+<div>
+    <input type="button" value="Spara" onclick="save_edit_gallery()">
+    <input type="button" value="Stäng" onclick="close_edit_gallery()">
+</div>

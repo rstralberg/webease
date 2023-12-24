@@ -46,6 +46,10 @@ function enable_move_tools(enable) {
 }
 
 function enable_article_tools(enable) {
+    enable_tool('t-vimeo', enable, 'vimeo');
+    enable_tool('t-movie', enable, 'movie');
+    enable_tool('t-gallery', enable, 'gallery');
+    enable_tool('t-slider', enable, 'slider');
     enable_tool('t-audio', enable, 'audio');
     enable_tool('t-youtube', enable, 'youtube');
     enable_tool('t-spotify', enable, 'spotify');

@@ -12,6 +12,10 @@ require_once __DIR__ . '/../creators/create_spotify.php';
 require_once __DIR__ . '/../creators/create_text.php';
 require_once __DIR__ . '/../creators/create_title.php';
 require_once __DIR__ . '/../creators/create_youtube.php';
+require_once __DIR__ . '/../creators/create_gallery.php';
+require_once __DIR__ . '/../creators/create_video.php';
+require_once __DIR__ . '/../creators/create_slider.php';
+require_once __DIR__ . '/../creators/create_vimeo.php';
 
 if (verify_args($args, ['pageid'])) {
 
@@ -61,12 +65,16 @@ if (verify_args($args, ['pageid'])) {
                 case 'audio': $html.= create_audio($args->key, $args->pageid, $section); break;
                 case 'empty': $html.= create_empty(); break;
                 case 'image': $html.= create_image($args->key, $args->pageid, $section); break;
+                case 'gallery': $html.= create_gallery($args->key, $args->pageid, $section); break;
+                case 'video': $html.= create_video($args->key, $args->pageid, $section); break;
                 case 'list': $html.= create_list($section); break;
                 case 'soundcloud': $html.= create_soundcloud($section); break;
                 case 'spotify': $html.= create_spotify($section); break;
                 case 'text':  $html.= create_text($section); break;
                 case 'title': $html.= create_title($section); break;
                 case 'youtube': $html.= create_youtube($section); break;
+                case 'vimeo': $html.= create_vimeo($section); break;
+                case 'slider': $html.= create_slider($args->key, $args->pageid, $section); break;
                 default: break;
             }
             $html.= '</section>';

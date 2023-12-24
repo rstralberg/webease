@@ -3,3 +3,17 @@ INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`i
 INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Grupper',0,'admin',1,0,1,1);
 INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Sven Wallgren',2,'admin',1,0,0,1);
 INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Peter Karlsson',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Roland Strålberg',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Kenneth Cosimo',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Kenneth Nelson',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Jan Morin',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Gerhard Malmberg',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Anders Nyström',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Anders Forsberg',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Lennart Strömbäck',2,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('The Neverland Project',3,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Westpoint',3,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Wildliw',3,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Karl XII',3,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Ekipage',3,'admin',1,0,0,1);
+INSERT INTO `pages` (`title`,`parentId`,`author`,`showTitle`,`pos`,`isParent`,`isPublic`) VALUES ('Bedlam',3,'admin',1,0,0,1);

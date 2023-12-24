@@ -1,11 +1,10 @@
-
 section {
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    
+
     background-color: var(--sectionBg);
     color: var(--sectionFg);
 
@@ -14,7 +13,7 @@ section {
     border-radius: var(--borderRadius);
     outline-style: solid;
     outline-color: var(--sectionFg);
-    outline-width: calc( var(--sectionBorder) * 1px);
+    outline-width: calc(var(--sectionBorder) * 1px);
 
 
     box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--sectionShadow));
@@ -37,7 +36,7 @@ section:hover {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
 }
 
-section img   {
+section img {
     height: auto;
     width: 95% !important;
 }
@@ -68,11 +67,11 @@ section li {
 
 
 .empty {
-    display: flex;    
+    display: flex;
 }
 
 .text {
-    display: flex;    
+    display: flex;
     font-size: var(--fontsize);
     font-weight: normal;
     font-style: normal;
@@ -86,33 +85,100 @@ section li {
     outline-color: var(--sectionTitleBorderColor);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, var(--sectionTitleShadow));
     font-weight: bold;
-    font-size: calc( 1.5 * var(--fontsize));
+    font-size: calc(1.5 * var(--fontsize));
     line-height: 0px;
     padding-top: 0;
     padding-bottom: 0;
 }
 
 .image {
-    display: flex;    
+    display: flex;
 }
 
 .audio {
-    display: block;    
+    display: block;
 }
 
 .soundcloud {
-    display: block;    
+    display: block;
 }
 
 .spotify {
-    display: block;    
+    display: block;
 }
 
 .youtube {
-    display: block;    
+    display: block;
 }
 
+.vimeo {
+    display: block;
+}
 
+/* -----------------------------------------
+------------- GALLERY -------------------
+----------------------------------------- */
+.gallery {
+    color: var(--sectionFg);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.gallery-figure {
+    border: none;
+    outline: none;
+    align-self: inherit;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  -----------------------------------------
+    -------------- SLIDER -------------------
+    ----------------------------------------- */
+.slider {
+    display: block;
+}
+
+.slider-container {
+    max-width: var(--contentW);
+    position: relative;
+    margin: auto;
+}
+
+.slider-img {
+    max-width: 100%;
+    max-height: 40vh;
+    position: relative;
+    margin: auto;
+}
+
+.slider-fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slides {
+    display: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
 
 @media screen and (max-width: 600px) {
 

@@ -12,19 +12,31 @@ function update_spotify(section) {
             loading="lazy">
         </iframe>
     */
-    let iframe = section.querySelector('iframe');
-    if( !is_valid(iframe)) return;
+    let element = section.querySelector('iframe');
+    if( !is_valid(element)) return;
 
-    let src = iframe.src;
-    src = src.split('track/')[1];
-    src = src.split('?')[0];
+    let url = element.src;
+    let splitter = '';
+    if( url.includes('/track/')) {
+        splitter = 'track/';
+    } else if ( url.includes('/episode/')) {
+        splitter = 'episode/';
+    }
+
+    let value = url.split(splitter);
+    if( value.lenght < 2 ) return;
+    
+    let track = value[1].split('?');
+    if( track.lenght < 2 ) return;
+    track = track[0];
 
     server('update/section', {
         id: section.id,
         pos: get_child_pos(section),
         align: section.style.justifyContent,
         content: JSON.stringify( {
-            track: src
+            track: track,
+            splitter: splitter
         })
     });
 }

@@ -21,3 +21,23 @@ exit
 # File and Folder permissions
 chown -hR roland:www-data public
 
+
+# TODO
+
+## Add Youtube Comments 
+
+## Add croppning for Gallery images
+
+## Försättsbild på Mp4 videos
+
+## In Text add support for new lines
+
+## Check that titles really are save direct after add
+
+## Title does not save after new Article
+
+## Sometimes its possible to add without any article selected
+Which ends up in att 'Article missing'
+
+## Tools visas inte direkt efter inloggning
+

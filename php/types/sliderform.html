@@ -1,0 +1,30 @@
+<h1>Bildgalleri</h1>
+
+<hr>
+
+<div id="sf-slider" class="slider-container">
+</div>
+
+<div>
+    <label for="sf-file">Klicka för att lägga till en bild:</label>
+    <input accept="image/jpeg, image/png, image/jpg" type="file" id="sf-file" name="file"
+        onchange="slider_image_selected(this)">
+</div>
+
+<div>
+    <label for="sf-speed">Hastighet:</label>
+    <input type="number" id="sf-speed" min="1" max="30" value="5" onchange="slider_time(this)">
+</div>
+
+
+<div>
+    <label for="sf-shadow">Skugga:</label>
+    <input type="checkbox" id="sf-shadow" checked onchange="slider_shadow_toggle(this)">
+</div>
+
+<hr>
+
+<div>
+    <input type="button" value="Spara" onclick="save_slider()">
+    <input type="button" value="Stäng" onclick="close_slider()">
+</div>

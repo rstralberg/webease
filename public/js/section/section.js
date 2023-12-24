@@ -28,6 +28,13 @@ function entering_section(element) {
             figcaption.contentEditable = true;
         }
     }
+
+    let func = 'edit_' + type;
+    if (typeof window[func] === 'function') {
+        element.addEventListener( 'dblclick', (e) => { 
+            window[func](e.target); 
+        } );
+    }
 }
 
 function leaving_section() {
@@ -43,7 +50,10 @@ function leaving_section() {
                 img.removeEventListener('mousewheel', (e) => { });
             }
         }
-
+        else if (type === 'gallery' ) {
+            element.removeEventListener( 'dblclick', (e) => {} );
+        }
+    
     }
 
     enable_add_tool(false);

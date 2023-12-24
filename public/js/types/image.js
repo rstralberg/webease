@@ -56,9 +56,6 @@ function add_new_image() {
         content: JSON.stringify( {
             src: filename_only(document.getElementById('ai-image').src),
             caption: document.getElementById('ai-caption').value,
-            width: (vh2px(parseInt(get_style('contentW')))) *
-                    (parseInt(get_style('articleW')/100)) * 
-                    (parseInt(get_style('sectionW'))/100) + 'px',
             shadow: '1'
 
         })

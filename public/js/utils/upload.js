@@ -37,7 +37,7 @@ function upload_image(fileFromInput, folder) {
 
                 //note: remember that the image is now base64-encoded Data URI
                 //sendind the image to the server (php)
-                    
+
                 var fd = new FormData();
                 fd.append("image", srcEncoded);
                 fd.append('key', key());
@@ -56,7 +56,7 @@ function upload_image(fileFromInput, folder) {
                         resolve(response);
                     }
                 };
-                xhr.open("POST", "/image.php");
+                xhr.open("POST", "php/image.php");
                 xhr.send(fd);
             };
             img.src = (_a = event.target) === null || _a === void 0 ? void 0 : _a.result;
@@ -65,7 +65,7 @@ function upload_image(fileFromInput, folder) {
 }
 
 function audio_path(audiofile) {
-    return  'sites/' + key() + '/' + pageid() + '/' + audiofile;
+    return 'sites/' + key() + '/' + pageid() + '/' + audiofile;
 }
 
 function upload_mp3(fileFromInput) {
@@ -77,15 +77,41 @@ function upload_mp3(fileFromInput) {
         fd.append('key', key());
         fd.append('mp3', fileFromInput);
 
-        fetch('mp3.php', {
+        fetch('php/mp3.php', {
             method: 'POST',
-            headers: new Headers({'content-type': 'audio/mp3'}),
+            headers: new Headers({ 'content-type': 'audio/mp3' }),
             mode: 'no-cors',
             body: fd
         })
-            .then( response => {
+            .then(response => {
                 let r = response.json();
-                resolve(r) ;
+                resolve(r);
+            })
+            .catch(err => {
+                error(err);
+                reject(err);
+            });
+    });
+}
+
+function upload_movie(fileFromInput) {
+
+    return new Promise((resolve, reject) => {
+
+        let fd = new FormData();
+        fd.append('folder', pageid());
+        fd.append('key', key());
+        fd.append('mov', fileFromInput);
+
+        fetch('php/video.php', {
+            method: 'POST',
+            headers: new Headers({ 'content-type': 'video/quicktime' }),
+            mode: 'no-cors',
+            body: fd
+        })
+            .then(response => {
+                let r = response.json();
+                resolve(r);
             })
             .catch(err => {
                 error(err);

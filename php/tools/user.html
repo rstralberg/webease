@@ -1,27 +1,31 @@
 <form id="user-tools" class="user-tools">
-    <img id="t-audio" class="user-tool" src="icons/${style}/audio.svg" onclick="add_audio()">
-    <img id="t-youtube" class="user-tool" src="icons/${style}/youtube.svg" onclick="add_youtube()">
-    <img id="t-spotify" class="user-tool" src="icons/${style}/spotify.svg" onclick="add_spotify()">
-    <img id="t-soundcloud" class="user-tool" src="icons/${style}/soundcloud.svg" onclick="add_soundcloud()">
-    <img id="t-image" class="user-tool" src="icons/${style}/image.svg" onclick="add_image()">
-    <img id="t-title" class="user-tool" src="icons/${style}/title.svg" onclick="add_title()">
-    <img id="t-text" class="user-tool" src="icons/${style}/text.svg" onclick="add_text()">
-    <img id="t-list" class="user-tool" src="icons/${style}/list.svg" onclick="add_list()">
-    <img id="t-shadow" class="user-tool" src="icons/${style}/shadow.svg" onclick="toggle_shadow()">
-    <img id="t-hr" class="user-tool" src="icons/${style}/hr.svg" onclick="add_line()">
-    <img id="t-link" class="user-tool" src="icons/${style}/link.svg" onclick="add_weblinik()">
-    <img id="t-left" class="user-tool" src="icons/${style}/left.svg" onclick="align_left()">
-    <img id="t-center" class="user-tool" src="icons/${style}/center.svg" onclick="align_center()">
-    <img id="t-right" class="user-tool" src="icons/${style}/right.svg" onclick="align_right()">
-    <img id="t-clear_format" class="user-tool" src="icons/${style}/clear_format.svg" onclick="normal_text()">
-    <img id="t-pages" class="user-tool" src="icons/${style}/pages.svg" onclick="mark_selected()">
-    <img id="t-italic" class="user-tool" src="icons/${style}/italic.svg" onclick="selection_to_italic()">
-    <img id="t-bold" class="user-tool" src="icons/${style}/bold.svg" onclick="selection_to_bold()">
-    <img id="t-up" class="user-tool" src="icons/${style}/up.svg" onclick="move_selected_up()">
-    <img id="t-down" class="user-tool" src="icons/${style}/down.svg" onclick="move_selected_down()">
-    <img id="t-delete" class="user-tool" src="icons/${style}/delete.svg" onclick="delete_selected()">
-    <img id="t-add" class="user-tool" src="icons/${style}/add.svg" onclick="add_article()">
-    <img id="t-rename" class="user-tool" src="icons/${style}/edit.svg" onclick="on_rename_page()">
-    <img id="t-save" class="user-tool" src="icons/${style}/save.svg" onclick="save_article()">
+    <img title="Ladda upp och lägg till en video" id="t-movie" class="user-tool" src="icons/${style}/movie.svg" onclick="add_movie()">
+    <img title="Ladda upp och lägg till en låt" id="t-audio" class="user-tool" src="icons/${style}/audio.svg" onclick="add_audio()">
+    <img title="Lägg till en Youtube video" id="t-youtube" class="user-tool" src="icons/${style}/youtube.svg" onclick="add_youtube()">
+    <img title="Lägg till en Vimeo video" id="t-vimeo" class="user-tool" src="icons/${style}/vimeo.svg" onclick="add_vimeo()">
+    <img title="Lägg till något från Spotify" id="t-spotify" class="user-tool" src="icons/${style}/spotify.svg" onclick="add_spotify()">
+    <img title="Lägg till något från Soundcloud" id="t-soundcloud" class="user-tool" src="icons/${style}/soundcloud.svg" onclick="add_soundcloud()">
+    <img title="Lägg till en bild" id="t-image" class="user-tool" src="icons/${style}/image.svg" onclick="add_image()">
+    <img title="Lägg till ett bildkollage" id="t-gallery" class="user-tool" src="icons/${style}/gallery.svg" onclick="add_gallery()">
+    <img title="Lägg till ett bildkarusell" id="t-slider" class="user-tool" src="icons/${style}/slider.svg" onclick="add_slider()">
+    <img title="Lägg till en rubrik" id="t-title" class="user-tool" src="icons/${style}/title.svg" onclick="add_title()">
+    <img title="Lägg till ett textavsnitt" id="t-text" class="user-tool" src="icons/${style}/text.svg" onclick="add_text()">
+    <img title="Lägg till en punktlista" id="t-list" class="user-tool" src="icons/${style}/list.svg" onclick="add_list()">
+    <img title="Skuggning eller inte" id="t-shadow" class="user-tool" src="icons/${style}/shadow.svg" onclick="toggle_shadow()">
+    <img title="Lägg till en linje i texten" id="t-hr" class="user-tool" src="icons/${style}/hr.svg" onclick="add_line()">
+    <img title="Skapa en webblänk" id="t-link" class="user-tool" src="icons/${style}/link.svg" onclick="add_weblinik()">
+    <img title="Justera till vänster" id="t-left" class="user-tool" src="icons/${style}/left.svg" onclick="align_left()">
+    <img title="Centrera" id="t-center" class="user-tool" src="icons/${style}/center.svg" onclick="align_center()">
+    <img title="Justera till höger" id="t-right" class="user-tool" src="icons/${style}/right.svg" onclick="align_right()">
+    <img title="Ta bort kursiv eller fet stil från markerad text" id="t-clear_format" class="user-tool" src="icons/${style}/clear_format.svg" onclick="normal_text()">
+    <img title="Gör markerad text ... ja just markerad" id="t-pages" class="user-tool" src="icons/${style}/pages.svg" onclick="mark_selected()">
+    <img title="Växla markerad text mellan vanlig och kursiv stil" id="t-italic" class="user-tool" src="icons/${style}/italic.svg" onclick="selection_to_italic()">
+    <img title="Växla markerad text mellan vanlig och fet stil" id="t-bold" class="user-tool" src="icons/${style}/bold.svg" onclick="selection_to_bold()">
+    <img title="Flytta vald sektion uppåt" id="t-up" class="user-tool" src="icons/${style}/up.svg" onclick="move_selected_up()">
+    <img title="Flytta vald sektion nedåt" id="t-down" class="user-tool" src="icons/${style}/down.svg" onclick="move_selected_down()">
+    <img title="Radera vald sektion" id="t-delete" class="user-tool" src="icons/${style}/delete.svg" onclick="delete_selected()">
+    <img title="Lägg till en ny sektion eller avdelning" id="t-add" class="user-tool" src="icons/${style}/add.svg" onclick="add_article()">
+    <img title="Ge sidan ett nytt namn" id="t-rename" class="user-tool" src="icons/${style}/edit.svg" onclick="on_rename_page()">
+    <img title="Spara sidan" id="t-save" class="user-tool" src="icons/${style}/save.svg" onclick="save_article()">
 
 </form>

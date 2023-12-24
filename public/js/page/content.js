@@ -11,6 +11,8 @@ function get_content() {
             let container = document.querySelector('.articles');
             container.innerHTML = resolve;
 
+            enable_sliders(container);
+
             if (username() !== '') {
 
                 for (let i = 0; i < container.childElementCount; i++) {
@@ -49,6 +51,7 @@ function get_content() {
             }
         }
     )
+    startSlides();
 }
 
 

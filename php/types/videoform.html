@@ -1,0 +1,20 @@
+<h1>Video</h1>
+
+<hr>
+
+<div class="cols-1" id="m-player">
+</div>
+
+<hr>
+
+<div class="cols-2">
+    <label for="m-file">Klicka för att ladda up videon</label>
+    <input accept="video/mp4" type="file" id="m-file" onchange="video_selected(this)">
+</div>
+
+<hr>
+
+<div class="cols-2">
+    <input type="button" value="Spara" onclick="add_new_video()">
+    <input type="button" value="Stäng" onclick="close_video()">
+</div>

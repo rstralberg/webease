@@ -48,7 +48,6 @@ function save_article() {
         for( let i=0; i < article.childElementCount; i++) {
             let section = article.children[i];
             let func = 'update_' + section.getAttribute('type');
-            console.log( func );
             window[func](section);
         }
     }

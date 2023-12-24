@@ -1,0 +1,16 @@
+<h1>Vimeo</h1>
+
+<div id="vi-frame">
+</div>
+
+<div class="left">
+    <label style="width:min-content" for="vi-url">Klistra in här:</label>
+    <input style="width:-webkit-fill-available" type="text" id="vi-url" onchange="on_vimeo_pasted(this)">
+</div>
+
+<hr>
+
+<div>
+    <input id="vi-save-button" type="button" value="Spara" onclick="on_save_vimeo()">
+    <input type="button" value="Stäng" onclick="on_close_vimeo()">
+</div>

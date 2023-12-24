@@ -1,3 +1,5 @@
+"use strict";
+
 function add_spotify() {
 
     server('types/spotifyform', {}).then(
@@ -13,7 +15,20 @@ function on_close_spotify() {
 
 function on_spotify_pasted(element) {
 
-    let value = element.value.split('track/');
+    let url = element.value;
+    let splitter = '';
+    if( url.includes('/track/')) {
+        splitter = 'track/';
+    } else if ( url.includes('/episode/')) {
+        splitter = 'episode/';
+    }
+    else if ( url.includes('/playlist/')) {
+        splitter = 'playlist/';
+    }
+    else if ( url.includes('/album/')) {
+        splitter = 'album/';
+    }
+    let value = element.value.split(splitter);
     if( value.lenght < 2 ) return;
     
     let track = value[1].split('?');
@@ -21,7 +36,7 @@ function on_spotify_pasted(element) {
     track = track[0];
 
     let html = '<iframe style="border-radius:12px" ';
-    html += 'src="https://open.spotify.com/embed/track/';
+    html += 'src="https://open.spotify.com/embed/' + splitter;
     html += track;
     html += '?utm_source=generator" width="100%" height="352" ';
     html += 'frameBorder="0" allowfullscreen="" allow="autoplay; ';
@@ -39,7 +54,21 @@ function add_new_spotify() {
     let article = selected_article();
 
     let element = document.getElementById('sp-url');
-    let value = element.value.split('track/');
+    let url = element.value;
+    let splitter = '';
+    if( url.includes('/track/')) {
+        splitter = 'track/';
+    } else if ( url.includes('/episode/')) {
+        splitter = 'episode/';
+    }
+    else if ( url.includes('/playlist/')) {
+        splitter = 'playlist/';
+    }
+    else if ( url.includes('/album/')) {
+        splitter = 'album/';
+    }
+    
+    let value = element.value.split(splitter);
     if( value.lenght < 2 ) return;
     
     let track = value[1].split('?');
@@ -55,7 +84,54 @@ function add_new_spotify() {
         align: 'center',
         type: 'spotify',
         content: JSON.stringify( {
-            track: track
+            track: track,
+            splitter: splitter
+        })
+    }).then(
+        () => {
+            get_content()
+        }
+    );
+
+}
+
+
+function update_spotify(section) {
+    
+
+    let article = selected_article();
+
+    let iframe = section.querySelector('iframe');
+
+    let url = iframe.src;
+    let splitter = '';
+    if( url.includes('/track/')) {
+        splitter = 'track/';
+    } else if ( url.includes('/episode/')) {
+        splitter = 'episode/';
+    }
+    else if ( url.includes('/playlist/')) {
+        splitter = 'playlist/';
+    }
+    else if ( url.includes('/album/')) {
+        splitter = 'album/';
+    }
+    
+    let value = iframe.src.split(splitter);
+    if( value.lenght < 2 ) return;
+    
+    let track = value[1].split('?');
+    if( track.lenght < 2 ) return;
+    track = track[0];
+
+    server('add/section', {
+        articleId: article.id,
+        pos: article.childElementCount,
+        align: 'center',
+        type: 'spotify',
+        content: JSON.stringify( {
+            track: track,
+            splitter: splitter
         })
     }).then(
         () => {

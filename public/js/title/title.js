@@ -16,3 +16,16 @@ function get_title() {
     );
 }
 
+function update_title(section) {
+
+    let h1 = section.querySelector('h1');
+
+    server('update/section', {
+        id: section.id,
+        align: section.style.justifyContent,
+        pos: get_child_pos(section),
+        content: JSON.stringify( {
+            title: h1.innerText
+        })
+    });
+}

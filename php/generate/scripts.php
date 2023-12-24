@@ -69,6 +69,10 @@ function scripts() : string {
     $html.= script('types/youtube');
     $html.= script('types/list');
     $html.= script('types/audio');
+    $html.= script('types/gallery');
+    $html.= script('types/video');
+    $html.= script('types/slider');
+    $html.= script('types/vimeo');
     
     $html.= script('user/account');
     $html.= script('user/edit');

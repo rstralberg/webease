@@ -20,3 +20,7 @@ function filename_only(path) {
 function replace_filename(path, filename ) {
     return path.substring(0, path.lastIndexOf('/')) + '/' + filename;
 }
+
+function file_extension(path) {
+    return path.split('.').pop();
+}
