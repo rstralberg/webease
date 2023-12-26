@@ -1,21 +1,45 @@
-Gall-1.jpg
-Gall-fix.jpg
-Ggapbilden.jpg
-Gisa-jocke.jpg
-Gmedonza.jpg
-Gprofilmtrl.jpg
-Lcleored.jpg
-Lkoren.jpg
-Llasidrums.jpg
-Lnolia.jpg
-Plasdrum.jpg
-Plassedrumkit.jpg
-PLL-koren.jpg
-Pllmix.jpg
-Pllsynth.jpg
-Pstudiobas.jpg
-Wnytext.jpg
-wp-03.jpg
-wp-14.jpg
-wp-29.jpg
-wp-medak-2.jpg
+<form id="cropper"
+    style="position: absolute; left: 10vw; height: 600px; width: 600px; background: rgb(32, 32, 32); border: 2px dashed red;">
+    <div class="cropper"
+        style="left: 0px; top: 0px; width: 600px; height: 600px; display: block; position: absolute; background: rgba(200, 0, 0, 0.3);">
+        <div class="crop-mover" style="left: 53px; top: 69px;"></div>
+        <div class="crop-resizer" style="left: 531px; top: 547px;"></div>
+        <canvas width="596" height="596">
+        </canvas>
+    </div>
+    <input type="button" value="Spara"
+        style="position: absolute; width: 120px; height: 2em; bottom: -3em; left: 0px;">
+        <input type="button"
+        value="Avbryt" style="position: absolute; width: 120px; height: 2em; bottom: -3em; left: 140px;">
+</form>
+
+<form id="image-form" style="position: fixed; top: 10vh; z-index: 2000; width: 30vw;">
+    <h1 class="form-banner"></h1>
+    <h1>Bild</h1>
+    <hr>
+    <div class="cropper">
+        <div class="crop-mover" style="left: 53px; top: 69px;"></div>
+        <div class="crop-resizer" style="left: 531px; top: 547px;"></div>
+        <canvas width="596" height="596">
+        </canvas>
+    </div>
+    </div>
+    <div>
+        <label for="ai-file">Klicka för att välja bild:</label>
+        <input accept="image/jpeg, image/png, image/jpg"
+            type="file" id="ai-file" name="file" value="sites/gg/WebEase-128.png" onchange="on_image_file(this)">
+    </div>
+    <div>
+        <label for="ai-caption">Kommentar:</label>
+        <input type="text" id="ai-caption"
+            placeholder="Skriv en kort kommentar till bilden" value="">
+    </div>
+    <div>
+        <label for="ai-shadow">Skugga:</label><input type="checkbox" id="ai-shadow" checked="">
+    </div>
+    <hr>
+    <div>
+        <input type="button" id="ai-save" value="Spara" onclick="add_new_image()">
+        <input type="button" value="Stäng" onclick="on_close_image()">
+    </div>
+</form>

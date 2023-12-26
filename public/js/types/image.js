@@ -6,7 +6,7 @@ function add_image() {
     
     server('types/imageform', {
         pageid: pageid(),
-        size: 128,
+        size: 512,
         url: url,
         caption: caption,
         shadow: shadow
@@ -21,6 +21,7 @@ function on_close_image() {
     remove_form('image-form');
 }
 
+let image_cropper = null;
 function on_image_file(element) {
     
     const imageInput = element;
@@ -31,9 +32,14 @@ function on_image_file(element) {
         upload_image(selectedImage, folder).then(
             (resolve) => {
                 if (resolve.ok) {
-                    document.getElementById('ai-save').removeAttribute('disabled');
-                    document.getElementById('ai-image').src = image_page_path(resolve.content);
-                    document.getElementById('ai-caption').select();
+
+                    let img = document.createElement('img');
+                    img.addEventListener( 'load', (e) => {
+                        image_cropper = new cropper( img, onCropped, true);
+                    });
+                    img.src = image_page_path(resolve.content);
+                    remove_form('image-form');
+                    
                 }
             },
             (reject) => {
@@ -43,6 +49,11 @@ function on_image_file(element) {
     }
 }
 
+function onCropped(img) {
+    document.getElementById('ai-save').removeAttribute('disabled');
+    document.getElementById('ai-image').src = img.src;
+    document.getElementById('ai-caption').select();
+}
 
 function add_new_image() {
 

@@ -104,6 +104,7 @@ function scripts() : string {
     $html.= script('utils/style');
     $html.= script('utils/text');
     $html.= script('utils/upload');
+    $html.= script('utils/cropper');
     
     $html.= '<script type="application/javascript" src="/index.js"></script>';
     

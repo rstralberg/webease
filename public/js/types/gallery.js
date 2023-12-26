@@ -8,6 +8,7 @@ function add_gallery() {
 
 }
 
+let gallery_cropper = null;
 function gallery_image_selected(element) {
 
     const imageInput = element;
@@ -19,21 +20,24 @@ function gallery_image_selected(element) {
                 if (resolve.ok) {
                     let img = document.createElement('img');
                     img.addEventListener('load', (e) => {
+
+                        
+                        
                         let container = document.getElementById('g-gallery');
-                        let figure = document.createElement('figure');
-                        add_class(figure, 'gallery-figure');
-                        figure.appendChild(img);
-                        container.appendChild(figure);
+                        // let figure = document.createElement('figure');
 
-                        figure.addEventListener('click', (e) => {
-                            let container = document.getElementById('g-gallery');
-                            let figs = container.querySelectorAll('figure');
-                            for (let i = 0; i < figs.length; i++) {
-                                figs[i].style.border = 'none';
-                            }
-                            figure.style.border = '2px solid red';
-                        });
+                        // add_class(figure, 'gallery-figure');
+                        // figure.appendChild(img);
+                        // container.appendChild(figure);
 
+                        // figure.addEventListener('click', (e) => {
+                        //     let container = document.getElementById('g-gallery');
+                        //     let figs = container.querySelectorAll('figure');
+                        //     for (let i = 0; i < figs.length; i++) {
+                        //         figs[i].style.border = 'none';
+                        //     }
+                        //     figure.style.border = '2px solid red';
+                        // });
                     });
                     img.src = image_page_path(resolve.content);
 

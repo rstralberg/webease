@@ -1,0 +1,27 @@
+
+.cropper {
+    color: transparent;
+    display: block;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 2300;
+
+}
+
+.crop-mover {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 2400;
+    cursor: move;
+}
+
+.crop-resizer {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 2410;
+    cursor: e-resize;
+}

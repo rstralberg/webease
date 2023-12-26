@@ -88,3 +88,26 @@ function calc_image_scale(img, maxWidth, maxHeight) {
     };
 }
 
+var zoomedImage = null;
+
+function zoom_image(img, scale) {
+    if (!is_valid(img) ) return; 
+
+    if (img.style.transform == "scale(1)" || img.style.transform == "") {
+        img.style.transform = "scale(" + scale + ")";
+        img.style.zIndex = (parseInt(img.style.zIndex, 10) + 1).toString();
+        img.alt = img.style.zIndex;
+        if (zoomedImage) {
+            zoomedImage.style.zIndex = zoomedImage.style.zIndex - 1;
+        }
+        zoomedImage = img;
+        zoomedImage.alt = zoomedImage.style.zIndex;
+    } else {
+        img.style.transform = "scale(1)";
+        img.style.zIndex = img.style.zIndex - 1;
+        zoomedImage = null;
+    }
+    img.style.transition = "transform 0.25s ease";
+    if (img.style.zIndex < 1)
+        img.style.zIndex = 1;
+}
